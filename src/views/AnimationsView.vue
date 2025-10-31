@@ -1,7 +1,9 @@
 <template>
   <div class="view">
     <h2>Animations & Transitions</h2>
-    <p class="description">Experiment with CSS animations, transitions, and transforms</p>
+    <p class="description">
+      Experiment with CSS animations, transitions, and transforms
+    </p>
 
     <section class="example">
       <h3>Keyframe Animations</h3>
@@ -60,7 +62,9 @@ h3 {
   flex-wrap: wrap;
 }
 
-.bounce-box, .spin-box, .pulse-box {
+.bounce-box,
+.spin-box,
+.pulse-box {
   width: 120px;
   height: 120px;
   display: flex;
@@ -87,7 +91,8 @@ h3 {
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -105,7 +110,8 @@ h3 {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }

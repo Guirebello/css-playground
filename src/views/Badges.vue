@@ -17,7 +17,7 @@
     <section class="example">
       <h3>Shapes + Letters</h3>
       <div class="flex-container">
-        <span class="hexagon" data-grade="a" data-size="sm" />
+        <span class="hexagon spinning-badge" data-grade="a" data-size="sm" />
         <span class="hexagon" data-grade="b" data-size="sm" />
         <span class="hexagon" data-grade="c" data-size="sm" />
         <span class="hexagon" data-grade="d" data-size="sm" />
@@ -25,7 +25,7 @@
         <span class="hexagon" data-size="sm" />
       </div>
       <div class="flex-container">
-        <span class="hexagon" data-grade="a" data-size="md" />
+        <span class="hexagon spinning-badge" data-grade="a" data-size="md" />
         <span class="hexagon" data-grade="b" data-size="md" />
         <span class="hexagon" data-grade="c" data-size="md" />
         <span class="hexagon" data-grade="d" data-size="md" />
@@ -33,7 +33,7 @@
         <span class="hexagon" data-size="md" />
       </div>
       <div class="flex-container">
-        <span class="hexagon" data-grade="a" data-size="lg" />
+        <span class="hexagon spinning-badge" data-grade="a" data-size="lg" />
         <span class="hexagon" data-grade="b" data-size="lg" />
         <span class="hexagon" data-grade="c" data-size="lg" />
         <span class="hexagon" data-grade="d" data-size="lg" />
@@ -46,6 +46,19 @@
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
+
+.spinning-badge {
+  animation: spin 7s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .hexagon {
   position: relative;
@@ -69,7 +82,8 @@
 
 /*Badge content*/
 .hexagon[data-grade="a"] {
-  background: #0bd276;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  /* background: #0bd276; */
 }
 .hexagon[data-grade="a"]::after {
   content: "A";
@@ -105,7 +119,7 @@
 
 /* Small size */
 .hexagon[data-size="sm"] {
-  width: 40px;
+  width: 35px;
   height: 40px;
 }
 .hexagon[data-size="sm"]:not([data-grade])::after {
@@ -119,7 +133,7 @@
 
 /* Medium size */
 .hexagon[data-size="md"] {
-  width: 60px;
+  width: 50px;
   height: 60px;
 }
 .hexagon[data-size="md"]:not([data-grade])::after {
@@ -133,7 +147,7 @@
 
 /* Large size */
 .hexagon[data-size="lg"] {
-  width: 100px;
+  width: 80px;
   height: 100px;
 }
 .hexagon[data-size="lg"]:not([data-grade])::after {

@@ -46,7 +46,7 @@ body {
 }
 
 .sidebar {
-  width: 250px;
+  width: 240px;
   background: #1e293b;
   color: white;
   padding: 2rem 1.5rem;
